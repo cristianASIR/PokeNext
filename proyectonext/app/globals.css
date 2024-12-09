@@ -19,3 +19,13 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+nav ul{
+  
+  justify-content: center;
+  background-color: rgb(93, 126, 187);
+  display: flex;
+  li a{
+    margin-right: 13px;
+
+  }
+}

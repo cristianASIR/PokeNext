@@ -1,11 +1,6 @@
 const dictionaries = {
-    en: {
-        title: 'Welcome to my multilingual page',
-        description: 'This is a simple page that can be translated into Spanish and English.',
-    },
-    es: {
-        title: 'Bienvenido a mi página multilingüe',
-        description: 'Esta es una página sencilla que se puede traducir al español y al inglés.',
-    },
+    en: { title: 'Pokemon App', home: 'Home', gen1: 'Gen 1', gen2: 'Gen 2', gen3: 'Gen 3' }, 
+    es: { title: 'Aplicación Pokémon', home: 'Inicio', gen1: 'Gen 1', gen2: 'Gen 2', gen3: 'Gen 3' }, 
+    fr: { title: 'Application Pokémon', home: 'Accueil', gen1: 'Gen 1', gen2: 'Gen 2', gen3: 'Gen 3' },
 }
 export const getDictionary = (lang) => dictionaries[lang]
