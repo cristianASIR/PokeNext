@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../componentes/funciones";
 import Tarjeta from "@/app/componentes/Card";
+import PokemonCard from "@/app/componentes/Card";
 
 const Gen1 = () => {
   const [pokemon, setPokemons] = useState([]);
@@ -22,11 +23,11 @@ const Gen1 = () => {
     };
     fetchPokemons();
   }, []);
-
+  
   return (
     <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
       {pokemon.map((pokemon) => (
-        <Tarjeta
+        <PokemonCard
           key={pokemon.numero}
           img={pokemon.img}
           title={`#${pokemon.numero} - ${pokemon.nombre}`}

@@ -17,10 +17,12 @@ const PokemonCard = ({ pokemon }) => {
 
       {showModal && (
         <Modal onClose={handleCloseModal}>
-          <h2>{pokemon.name}</h2>
-          <p>ID: {pokemon.id}</p>
-          <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-          <button onClick={handleCloseModal}>Cerrar</button>
+          <h2>{PokemonCard.nombre}</h2>
+          <p>ID: {PokemonCard.id}</p>
+          <img src={PokemonCard.sprites} alt={PokemonCard.name} />
+          <button onClick={handleCloseModal}>Siguiente</button> - 
+          <button onClick={handleCloseModal}>Anterior</button> - 
+          <button onClick={handleCloseModal}></button> 
         </Modal>
       )}
     </div>

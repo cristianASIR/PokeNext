@@ -30,7 +30,7 @@ export default function Barra() {
                 <div className="py-1" role="none">
                   <Link href="/Generaciones/Gen1" className="text-gray-700 block px-4 py-2" >Gen 1</Link>
                   <Link href="/Generaciones/Gen2" className="text-gray-700 block px-4 py-2" >Gen 2</Link>
-                  <Link href="/Generaciones/Gen3" className="text-gray-700 block px-4 py-2" >Gen 3</Link>
+                  <Link href="/404" className="text-gray-700 block px-4 py-2" >Gen 3</Link>
                 </div>
               </div>
             )}
