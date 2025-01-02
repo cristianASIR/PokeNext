@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../componentes/funciones";
-import Tarjeta from "@/app/componentes/Card";
 import PokemonCard from "@/app/componentes/Card";
 
 const Gen1 = () => {
@@ -30,9 +29,12 @@ const Gen1 = () => {
         <PokemonCard
           key={pokemon.numero}
           img={pokemon.img}
-          title={`#${pokemon.numero} - ${pokemon.nombre}`}
-          text={`HP: ${pokemon.hp} Ataque: ${pokemon.ataque} Defensa: ${pokemon.defensa}`}
-          onButtonClick={() => alert(`Detalles de ${pokemon.nombre}`)} // Aquí puedes abrir el modal con detalles
+          id={pokemon.numero}
+          name={pokemon.nombre}
+          title={`#${pokemon.id} - ${pokemon.nombre}`}
+          hp={pokemon.hp} 
+          attack={pokemon.ataque} 
+          defense={pokemon.defensa}
         />
       ))}
     </div>

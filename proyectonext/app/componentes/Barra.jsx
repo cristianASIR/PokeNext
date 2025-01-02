@@ -11,7 +11,7 @@ export default function Barra() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-
+  const closeDropdown = () => setIsDropdownOpen(false);
 
   const changeLanguage = (lang) => {
     setIdioma(lang);
@@ -20,7 +20,7 @@ export default function Barra() {
     <>
       <nav>
         <ul>
-          <li><Link href="/">Inicio</Link></li>
+          <li><Link href="/Generaciones/Gen1">Inicio</Link></li>
           <li className="relative inline-block text-left"> {/* Added relative and inline-block */}
             <button onClick={toggleDropdown} type="button" >
               Generaciones
@@ -28,9 +28,9 @@ export default function Barra() {
             {isDropdownOpen && ( // Conditional rendering for dropdown
               <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
                 <div className="py-1" role="none">
-                  <Link href="/Generaciones/Gen1" className="text-gray-700 block px-4 py-2" >Gen 1</Link>
-                  <Link href="/Generaciones/Gen2" className="text-gray-700 block px-4 py-2" >Gen 2</Link>
-                  <Link href="/404" className="text-gray-700 block px-4 py-2" >Gen 3</Link>
+                  <Link href="/Generaciones/Gen1" className="text-gray-700 block px-4 py-2" onClick={closeDropdown}>Gen 1</Link>
+                  <Link href="/Generaciones/Gen2" className="text-gray-700 block px-4 py-2" onClick={closeDropdown}>Gen 2</Link>
+                  <Link href="/Generaciones/Gen3" className="text-gray-700 block px-4 py-2" onClick={closeDropdown}>Gen 3</Link>
                 </div>
               </div>
             )}
